@@ -1,0 +1,27 @@
+<div style="width: 100%;">
+  <div style="float:left;">
+    <table border="2">
+      <tr>
+        <th>
+          Avatar Image
+        </th>
+        <th>
+          Login
+        </th>
+      </tr>
+
+      <tr *ngFor="let item of (userList$ | async)" (click)="onClickOfUser(item)">
+        <td>
+          {{item.avatar_url}}
+        </td>
+        <td>
+          {{item.login}}
+        </td>
+      </tr>
+
+    </table>
+  </div>
+  <div style="float:right;">
+    <app-user-details [selectedUserChild]="selectedUser"></app-user-details>
+  </div>
+</div>
