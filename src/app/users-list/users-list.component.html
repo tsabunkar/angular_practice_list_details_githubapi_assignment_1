@@ -10,7 +10,8 @@
         </th>
       </tr>
 
-      <tr *ngFor="let item of (userList$ | async)" (click)="onClickOfUser(item)">
+
+      <tr *ngFor="let item of userList$ | async" (click)="onClickOfUser(item)">
         <td>
           {{item.avatar_url}}
         </td>

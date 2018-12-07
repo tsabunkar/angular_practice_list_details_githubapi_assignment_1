@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './users-list/user-details/user-details.component';
+import { StoreModule } from '@ngrx/store';
+import { userReducer } from './users-list/store/user.reducers';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { UserDetailsComponent } from './users-list/user-details/user-details.com
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ userSlice: userReducer }),
   ],
   providers: [],
   bootstrap: [AppComponent]
