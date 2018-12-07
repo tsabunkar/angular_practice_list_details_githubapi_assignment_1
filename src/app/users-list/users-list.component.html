@@ -3,6 +3,9 @@
     <table border="2">
       <tr>
         <th>
+          Id
+        </th>
+        <th>
           Avatar Image
         </th>
         <th>
@@ -12,6 +15,9 @@
 
 
       <tr *ngFor="let item of userList$ | async" (click)="onClickOfUser(item)">
+        <td>
+          {{item.id}}
+        </td>
         <td>
           {{item.avatar_url}}
         </td>
